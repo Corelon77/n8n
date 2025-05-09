@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    image: n8nio/n8n:1.44.0  # или последнюю стабильную
+    plan: starter
+    autoDeploy: true
+    disk:
+      name: n8n_data
+      mountPath: /home/node/.n8n
